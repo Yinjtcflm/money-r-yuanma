@@ -1,7 +1,8 @@
-import Layout from 'components/Layout';
 import { HashRouter as Router, Redirect ,Route,Switch} from 'react-router-dom';
-import styled from 'styled-components';
-import Nav from './components/Nav';
+import Money from 'views/Money';
+import NoMatch from 'views/NoMatch';
+import Statistics from 'views/Statistics';
+import Tags from 'views/Tags';
 
 
 
@@ -25,34 +26,6 @@ function App() {
           </Switch>
     </Router>
   );
-}
-
-function Statistics(){
-  return (
-    <Layout>
-    <h2>统计页面</h2>
-    </Layout>
-  )
-}
-function Tags(){
-  return (
-    <Layout>
-    <h2>标签页面</h2>
-    </Layout>
-  )
-}
-function Money(){
-  return (
-    <Layout>
-    <h2>记账页面</h2>
-    </Layout>
-  )
-}
-
-function NoMatch(){
-  return (
-    <div>你要找的页面不存在，请检查输入路径</div>
-  )
 }
 
 export default App;

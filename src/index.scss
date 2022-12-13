@@ -24,3 +24,8 @@ button{
     width: 1em;
     height: 1em;
 }
+.clearfix{
+    content:'';
+    display: block;
+    clear: both;
+}

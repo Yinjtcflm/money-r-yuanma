@@ -9,6 +9,7 @@ import NoMatch from "views/NoMatch";
 import Statistics from "views/Statistics";
 import Tags from "views/Tags";
 import styled from "styled-components";
+import { Tag } from "views/Tag";
 
 const AppWrapper = styled.div`
   color: #333;
@@ -19,13 +20,16 @@ function App() {
     <AppWrapper>
       <Router>
         <Switch>
-          <Route path="/tags">
+          <Route exact path="/tags">
             <Tags />
           </Route>
-          <Route path="/money">
+          <Route exact path="/tags/:tag">
+            <Tag />
+          </Route>
+          <Route exact path="/money">
             <Money />
           </Route>
-          <Route path="/statistics">
+          <Route exact path="/statistics">
             <Statistics />
           </Route>
           <Redirect exact from="/" to="/money"></Redirect>
